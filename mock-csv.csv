@@ -1,0 +1,13 @@
+skill_id,skill_name,category,proficiency_level,description
+1,Python Programming,Technology,Intermediate,Learn backend development and data analysis using Python.
+2,Fashion Design,Arts & Design,Advanced,Pattern drafting and garment construction techniques.
+3,Data Analysis,Technology,Beginner,Introduction to Excel SQL and basic data visualization.
+4,Conversational Spanish,Languages,Intermediate,Practice speaking and listening in everyday Spanish.
+5,Digital Marketing,Business,Intermediate,SEO basics and social media campaign management.
+6,Guitar Basics,Music,Beginner,Learn basic chords strumming patterns and simple songs.
+7,Docker & Kubernetes,DevOps,Advanced,Container orchestration and deployment pipelines.
+8,UI/UX Design,Design,Intermediate,Wireframing prototyping and user research using Figma.
+9,Public Speaking,Soft Skills,Intermediate,Overcoming stage fright and structuring presentations.
+10,Baking & Pastry,Culinary,Beginner,Learn how to bake breads cakes and classical pastries.
+11,Personal Finance,Life Skills,Intermediate,Budgeting investing and managing personal wealth.
+12,Photography,Arts & Design,Beginner,Understanding exposure composition and lighting.
