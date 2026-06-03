@@ -26,8 +26,18 @@ app.get("/", (req, res) => {
   res.render("home.ejs");
 });
 
-app.get("/explore", (req, res) => {
-  res.render("explore.ejs");
+// this route will fetch all the skills from the database and render the explore page with the skills data, we will also use this route to handle the search functionality for skills by rendering the explore page with the search results
+app.get("/explore",async (req, res) => {
+    try {
+      const result = await pool.query("SELECT * FROM skills");
+    console.log(result.rows);
+    res.render('explore', { skills: result.rows});
+    }
+      catch (err) {
+      console.error(err);
+      res.status(500).json({ error: "An error occurred while fetching skills." });
+      console.log("Error fetching skills:", err);
+      }
 });
 
 app.get("/profile", (req, res) => {
