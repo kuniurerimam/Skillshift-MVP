@@ -1,6 +1,9 @@
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 const port = 3000;
@@ -12,11 +15,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 const pool = new pg.Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "Skillshift",
-  password: "Ureri1003",
-  port: 5433,
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
 });
 
 app.get("/", (req, res) => {
@@ -69,7 +72,7 @@ app.post("/explore",async (req, res) => {
     "SELECT * FROM skills WHERE skill_name ILIKE $1",
     [`%${searchItem}%`]
   );
-  // console.log(result.rows);
+  console.log(result.rows);
   // res.json(result.rows);  
   res.render('explore', { skills: result.rows});
   } catch (err) {
