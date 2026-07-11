@@ -1,0 +1,63 @@
+main{
+    margin: 40px;
+}
+
+body{
+    margin: 0;
+    background-color: #020202;
+ }
+/*This is the css for the header */ 
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px 10px 10px;
+    margin:0px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.navbar .logo{
+    padding:0em 5em 0em 0em;   
+}
+
+.search-form{
+     padding:0em 5em ;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0em 0em 0em 5em;
+}
+
+.nav-links li{
+    margin-right: 20px;
+}
+
+
+
+/*This is the css for the home page */
+.home-container{
+    background-color: #020202;
+}
+
+.home-hero{
+    background-color: #B2D5E5;
+    padding: 50px;
+}
+
+.home-hero h1{
+    margin-top: 0px;
+}
+
+.home-features{
+    background-color: #B2D5E5;
+}
+
+.feature h2{
+    margin-top: 0px;
+}

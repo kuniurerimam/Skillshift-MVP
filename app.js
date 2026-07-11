@@ -8,11 +8,13 @@ dotenv.config();
 const app = express();
 const port = 3000;
 
-app.set('view engine', 'ejs');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
 app.use(express.static("public"));
+
+app.set('view engine', 'ejs');
+
 
 const pool = new pg.Pool({
   user: process.env.DB_USER,
@@ -26,7 +28,8 @@ app.get("/", (req, res) => {
   res.render("home.ejs");
 });
 
-// this route will fetch all the skills from the database and render the explore page with the skills data, we will also use this route to handle the search functionality for skills by rendering the explore page with the search results
+// this route will fetch all the skills from the database and render the explore page with the skills data,
+//  we will also use this route to handle the search functionality for skills by rendering the explore page with the search results
 app.get("/explore",async (req, res) => {
     try {
       const result = await pool.query("SELECT * FROM skills");
