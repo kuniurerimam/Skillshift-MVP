@@ -2,9 +2,10 @@ main{
     margin: 40px;
 }
 
+/*gradient using this colour :  #01031a*/
 body{
     margin: 0;
-    background-color: #020202;
+    background-color:#0B2633;
  }
 /*This is the css for the header */ 
 .navbar{
@@ -41,21 +42,29 @@ body{
 
 
 /*This is the css for the home page */
-.home-container{
-    background-color: #020202;
+.home-hero-container{
+    background-color: #0B2633;
 }
 
 .home-hero{
-    background-color: #B2D5E5;
-    padding: 50px;
+    color: #B2D5E5;
+    background-color: #203E4C;
+    padding: 70px;
+    border-radius: 20px;
+    height: 500px;
 }
 
 .home-hero h1{
     margin-top: 0px;
 }
 
+.home-features-container{
+    padding: 50px;
+}
+
 .home-features{
-    background-color: #B2D5E5;
+    background-color: #0B2633;
+    color: #B2D5E5;
 }
 
 .feature h2{
