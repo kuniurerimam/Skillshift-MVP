@@ -24,8 +24,38 @@ const pool = new pg.Pool({
   port: process.env.DB_PORT,
 });
 
-app.get("/", (req, res) => {
-  res.render("home.ejs");
+app.get("/",async (req, res) => {
+  try{
+    // adjust the next link to fetch the first 100 number of rows in the skills table 
+    const row= await pool.query("SELECT COUNT(*) FROM (SELECT 1 FROM skills LIMIT 12) AS t;");
+    // console.log(`Number of rows in skills table: ${row.rows[0].count}`);
+    const row_num= row.rows[0].count;
+    const random_number1 = Math.floor(Math.random() * row_num) + 1;
+    let random_number2 = Math.floor(Math.random() * row_num) + 1;
+    if (random_number2 === random_number1) {
+      random_number2 = Math.floor(Math.random() * row_num) + 1;
+    }
+    let random_number3 = Math.floor(Math.random() * row_num) + 1;
+    if (random_number3 === random_number1 || random_number3 === random_number2) {
+      random_number3 = Math.floor(Math.random() * row_num) + 1;
+    }
+
+
+    // console.log(`Random numbers generated: ${random_number1}, ${random_number2}, ${random_number3}`);
+
+    // console.log(`Random number generated: ${random_number}`);
+    try {
+      const result = await pool.query("SELECT * FROM skills WHERE skill_id IN ($1, $2, $3)", [random_number1, random_number2, random_number3]);
+      // console.log(result.rows);
+      const now = new Date();
+      const date= now.getFullYear();
+      res.render('home', { skill: result.rows, Date: date });
+    } catch (err) {
+      console.error(err);
+    }
+  } catch (err) {
+    console.error(err);
+  }
 });
 
 // this route will fetch all the skills from the database and render the explore page with the skills data,

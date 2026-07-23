@@ -22,38 +22,18 @@
         </div>
     </section>
     <section class="home-cards">
-        <!-- From Uiverse.io by joe-watson-sbf --> 
+        <% for (let i = 0; i < skill.length; i++) { %>
         <div class="card-container">
             <div class="box">
-                <span class="title">GLASS EFFECT</span>
+                <span class="title"><%= skill[i].skill_name %></span>
                 <div>
-                    <strong>JOE WATSON SBF</strong>
-                    <p>0000 000 000 0000</p>
-                    <span>VALID</span> <span>01/28</span>
+                    <strong><%= skill[i].category %></strong>
+                    <p><%= skill[i].description %></p>
+                    <span><%= skill[i].proficiency_level %></span>
                 </div>
             </div>
         </div>
-         <div class="card-container">
-            <div class="box">
-                <span class="title">GLASS EFFECT</span>
-                <div>
-                    <strong>JOE WATSON SBF</strong>
-                    <p>0000 000 000 0000</p>
-                    <span>VALID</span> <span>01/28</span>
-                </div>
-            </div>
-        </div>
-         <div class="card-container">
-            <div class="box">
-                <span class="title">GLASS EFFECT</span>
-                <div>
-                    <strong>JOE WATSON SBF</strong>
-                    <p>0000 000 000 0000</p>
-                    <span>VALID</span> <span>01/28</span>
-                </div>
-            </div>
-        </div>
-
+        <% } %>
     </section>
 </div>
 
