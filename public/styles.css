@@ -7,148 +7,445 @@ body{
     margin: 0;
     background-color:#0B2633;
  }
-/*This is the css for the header */ 
-.navbar{
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#home-middle{
+    position: relative;
+    left: 20px;
+}
+
+/*this is the layout for the 2048px and above screens*/
+
+@media (min-width: 2048px) {
+  /*This is the css for the header */ 
+  .navbar{
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0px 10px 10px;
+      margin:5px 0px;
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      background-color: #ffffff;
+      color: #0B2633;
+      z-index: 1;
+      font-size: 20px;
+  }
+
+  .navbar .logo{
+      padding:0em 5em 0em 0em; 
+      display: flex;
+    align-items: center;
+    justify-content: center;  
+
+  }
+
+  .search-form {
     display: flex;
-    justify-content: space-between;
-    padding: 10px 0px 10px 10px;
-    margin:10px 0px;
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    background-color: #ffffff;
-    z-index: 1;
-}
-
-.navbar .logo{
-    padding:0em 5em 0em 0em;   
-}
-
-.search-form{
-     padding:0em 5em ;
-}
-
-.nav-links{
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    margin: 0px;
-    padding: 0em 0em 0em 5em;
-}
-
-.nav-links li{
-    margin-right: 20px;
-}
-
-
-
-/*This is the css for the home page */
-.home-hero-container{
-    background-color: #0B2633;
-}
-
-.home-hero{
-    color: #B2D5E5;
-    background-color: #203E4C;
-    padding: 70px;
-    border-radius: 20px;
-    height: 500px;
-}
-
-.home-hero h1{
-    margin-top: 0px;
-}
-
-.home-features-container{
-    padding: 50px;
-    margin: 100px 0px;
-}
-
-.home-features{
-    background-color: #0B2633;
-    color: #B2D5E5;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.feature h2{
-    margin-top: 0px;
-}
-
-.home-cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}    
-
-/* From Uiverse.io by joe-watson-sbf */ 
-.card-container {
-  color: white;
-  position: relative;
-  font-family: sans-serif;
-  margin: 100px 0px
-}
-
-.card-container .box {
-  width: 90%;
-  height: 15.875em;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.074);
-  border: 1px solid rgba(255, 255, 255, 0.222);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  border-radius: 0.7rem;
-  transition: all ease 0.3s;
-}
-
-.card-container .box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card-container .box .title {
-  font-size: 2rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-}
-
-.card-container .box div strong {
-  display: block;
-  margin-bottom: 0.5rem;
-  padding: 0.2rem 0;
-}
-
-.card-container .box div p {
-  margin: 0;
-  font-size: 0.9em;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  padding: 0.2rem 0;
-}
-
-.card-container .box div span {
-  font-size: 0.7rem;
-  font-weight: 300;
-  padding: 0.2rem 0;
-}
-
-.card-container .box div span:nth-child(3) {
-  font-weight: 500;
-  margin-right: 0.2rem;
-  padding: 0.2rem 0;
-}
-
-.card-container .box:hover {
-  box-shadow: 0px 0px 20px 1px #ffbb763f;
-  border: 1px solid rgba(255, 255, 255, 0.454);
-}
-
-.footer{
-    color: #B2D5E5;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 20px;
-    width: 100%;
-    max-width: 1205px;
+  }
+  /* 
+  .search-input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #f4f2f2;
+    border: none;
+    color: #646464;
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+  }
+
+
+  .search-button {
+    border: none;
+    background-color: #f4f2f2;
+    margin-top: .1em;
+  }
+
+  .search-button:hover {
+    cursor: pointer;
+  
+  } */
+
+
+  .nav-links{
+      display: flex;
+    align-items: center;
+    justify-content: center;
+      list-style-type: none;
+      margin: 0px;
+      padding: 0em 0em 0em 5em;
+  }
+
+  .nav-links li{
+      margin-right: 20px;
+  }
+
+
+
+
+  /*This is the css for the home page */
+  .home-hero-container{
+      background-color: #0B2633;
+  }
+
+  .home-hero{
+      color: #B2D5E5;
+      background-color: #203E4C;
+      padding: 70px;
+      border-radius: 20px;
+      height: 500px;
+  }
+
+  .home-hero h1{
+      margin-top: 0px;
+  }
+
+  .home-features-container{
+      padding: 50px;
+      margin: 120px 0px;
+  }
+
+  .home-features{
+      background-color: #0B2633;
+      color: #B2D5E5;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+  }
+
+  .feature h2{
+      margin-top: 0px;
+  }
+
+  .home-cards{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+  }    
+
+  .card-container {
+    color: white;
+    position: relative;
+    font-family: sans-serif;
+    margin: 100px 0px
+  }
+
+  .card-container .box {
+    width: 90%;
+    height: 15.875em;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.074);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 0.7rem;
+    transition: all ease 0.3s;
+  }
+
+  .card-container .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-container .box .title {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+
+  .card-container .box div strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    padding: 0.2rem 0;
+  }
+
+  .card-container .box div p {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    padding: 0.2rem 0;
+  }
+
+  .card-container .box div span {
+    font-size: 0.7rem;
+    font-weight: 300;
+    padding: 0.2rem 0;
+  }
+
+  .card-container .box div span:nth-child(3) {
+    font-weight: 500;
+    margin-right: 0.2rem;
+    padding: 0.2rem 0;
+  }
+
+  .card-container .box:hover {
+    box-shadow: 0px 0px 20px 1px #ffbb763f;
+    border: 1px solid rgba(255, 255, 255, 0.454);
+  }
+
+
+  /*This is the css for the footer */
+ 
+  .footer{
+      background-color: #665635;
+      text-align: center;
+      padding: 20px;
+      width: 100%;
+      height: 300px;
+      color:#0B2633;
+      border-radius: 70px 70px 0px 0px;
+  }
+
+  #footer-title{
+      font-size: 100px;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+
+}
+
+/*this is the layout for the 2048px to  screens*/
+
+
+@media (max-width: 2047px) {
+  /*This is the css for the header */ 
+  .navbar{
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0px 10px 10px;
+      margin:5px 0px;
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      background-color: #ffffff;
+      color: #0B2633;
+      z-index: 1;
+      font-size: 20px;
+  }
+
+  .navbar .logo{
+      padding:0em 5em 0em 0em; 
+      display: flex;
+    align-items: center;
+    justify-content: center;  
+
+  }
+
+  .search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  /* 
+  .search-input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #f4f2f2;
+    border: none;
+    color: #646464;
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+  }
+
+
+  .search-button {
+    border: none;
+    background-color: #f4f2f2;
+    margin-top: .1em;
+  }
+
+  .search-button:hover {
+    cursor: pointer;
+  
+  } */
+
+
+  .nav-links{
+      display: flex;
+    align-items: center;
+    justify-content: center;
+      list-style-type: none;
+      margin: 0px;
+      padding: 0em 0em 0em 5em;
+  }
+
+  .nav-links li{
+      margin-right: 20px;
+  }
+
+
+
+
+  /*This is the css for the home page */
+  .home-hero-container{
+      background-color: #0B2633;
+  }
+
+  .home-hero{
+      color: #B2D5E5;
+      background-color: #203E4C;
+      padding: 70px;
+      border-radius: 20px;
+      height: 500px;
+  }
+
+  .home-hero h1{
+      margin-top: 0px;
+  }
+
+  .home-features-container{
+      padding: 50px;
+      margin: 120px 0px;
+  }
+
+  .home-features{
+      background-color: #0B2633;
+      color: #B2D5E5;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+  }
+
+  .feature h2{
+      margin-top: 0px;
+  }
+
+  .home-cards{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 100%;
+  }    
+
+  .card-container {
+    color: white;
+    font-family: sans-serif;
+    margin: 50px 10px
+  }
+
+  .card-container .box {
+    width: 90%;
+    height: 15.875em;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.074);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 0.7rem;
+    transition: all ease 0.3s;
+  }
+
+  .card-container .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-container .box .title {
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+
+  .card-container .box div strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    padding: 0.2rem 0;
+  }
+
+  .card-container .box div p {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    padding: 0.2rem 0;
+  }
+
+  .card-container .box div span {
+    font-size: 0.7rem;
+    font-weight: 300;
+    padding: 0.2rem 0;
+  }
+
+  .card-container .box div span:nth-child(3) {
+    font-weight: 500;
+    margin-right: 0.2rem;
+    padding: 0.2rem 0;
+  }
+
+  .card-container .box:hover {
+    box-shadow: 0px 0px 20px 1px #ffbb763f;
+    border: 1px solid rgba(255, 255, 255, 0.454);
+  }
+
+
+  /*This is the css for the footer */
+
+  .footer{
+      background-color: #665635;
+      text-align: center;
+      padding: 20px;
+      width: 100%;
+      height: 300px;
+      color:#0B2633;
+      border-radius: 70px 70px 0px 0px;
+  }
+
+  #footer-title{
+      font-size: 100px;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .home-hero{
+      padding: 50px;
+      height: 400px;
+  }
+
+  .home-features-container{
+      padding: 30px;
+      margin: 70px 0px;
+  }
+
+  .home-features{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+  }
+
+  .home-cards{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 10px;
+      width: 100%;
+  }    
+
+  .card-container {
+    margin: 20px 0px;
+    width: 80%;
+    position: relative;
+    left : 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  
+}
+
+@media (max-width: 480px) {
+  
 }

@@ -1,40 +1,44 @@
 <%- include('partials/header') %>
-<div class="home-hero-container">
-    <section class="home-hero">
-        <h1>Welcome to SkillShift</h1>
-        <p>Discover and share skills with our vibrant community.</p>
-        <a href="/explore" class="btn">Explore Skills</a>
-    </section>
-</div>
-<div class="home-features-container">
-    <section class="home-features">
-        <div class="feature">
-            <h2>Discover New Skills</h2>
-            <p>Browse through a wide range of skills offered by our community members.</p>
-        </div>
-        <div class="feature">
-            <h2>Share Your Expertise</h2>
-            <p>Offer your own skills and connect with others who want to learn from you.</p>
-        </div>
-        <div class="feature">
-            <h2>Connect with Others</h2>
-            <p>Join a supportive community of learners and experts to grow together.</p>
-        </div>
-    </section>
-    <section class="home-cards">
-        <% for (let i = 0; i < skill.length; i++) { %>
-        <div class="card-container">
-            <div class="box">
-                <span class="title"><%= skill[i].skill_name %></span>
-                <div>
-                    <strong><%= skill[i].category %></strong>
-                    <p><%= skill[i].description %></p>
-                    <span><%= skill[i].proficiency_level %></span>
+<div id="home-middle">
+    <div class="home-hero-container">
+        <section class="home-hero">
+            <h1>Welcome to SkillShift</h1>
+            <p>Discover and share skills with our vibrant community.</p>
+            <a href="/explore" class="btn">Explore Skills</a>
+        </section>
+    </div>
+    <div class="home-features-container">
+        <section class="home-features">
+            <div class="feature">
+                <h2>Discover New Skills</h2>
+                <p>Browse through a wide range of skills offered by our community members.</p>
+            </div>
+            <div class="feature">
+                <h2>Share Your Expertise</h2>
+                <p>Offer your own skills and connect with others who want to learn from you.</p>
+            </div>
+            <div class="feature">
+                <h2>Connect with Others</h2>
+                <p>Join a supportive community of learners and experts to grow together.</p>
+            </div>
+        </section>
+        <section class="home-cards">
+            <% for (let i = 0; i < skill.length; i++) { %>
+            <div class="card-container">
+                <div class="box">
+                    <span class="title"><%= skill[i].skill_name %></span>
+                    <div>
+                        <strong><%= skill[i].category %></strong>
+                        <p><%= skill[i].description %></p>
+                        <span><%= skill[i].proficiency_level %></span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <% } %>
-    </section>
+            <% } %>
+        </section>
+    </div>
 </div>
 
+
 <%- include('partials/footer') %>
+
