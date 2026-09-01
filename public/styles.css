@@ -1,12 +1,14 @@
+body{
+    margin: 0;
+    background-color:#0B2633;
+    width: 100%;
+ }
+
 main{
     margin: 40px;
 }
 
 /*gradient using this colour :  #01031a*/
-body{
-    margin: 0;
-    background-color:#0B2633;
- }
 
 a {
     text-decoration: none;
@@ -79,12 +81,11 @@ a {
     align-items: center;
     justify-content: center;
       list-style-type: none;
-      margin: 0px;
-      padding: 0em 0em 0em 5em;
+      margin: 0em 0em 0em 5em;
   }
 
   .nav-links li{
-      margin-right: 20px;
+      text-align: left;
   }
 
 
@@ -275,15 +276,15 @@ a {
     align-items: center;
     justify-content: center;
       list-style-type: none;
-      margin: 0px;
-      padding: 0em 0em 0em 5em;
+      margin: 0em 0em 0em 5em;
   }
 
   .nav-links li{
+      text-align: left;
       margin-right: 20px;
   }
 
-
+ 
 
 
   /*This is the css for the home page */
@@ -443,7 +444,97 @@ a {
 }
 
 @media (max-width: 768px) {
+   .search-form {
+    padding-right: 10px;
+   }
+
+
+   .navbar{
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0px 10px 10px;
+      margin:5px 0px;
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      background-color: #ffffff;
+      color: #0B2633;
+      z-index: 1;
+      font-size: 20px;
+  }
+
+  .navbar .logo{
+      padding:0em 5em 0em 0em; 
+      display: flex;
+    align-items: center;
+    justify-content: center;  
+
+  }
+
+  .search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  /* 
+  .search-input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #f4f2f2;
+    border: none;
+    color: #646464;
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+  }
+
+
+  .search-button {
+    border: none;
+    background-color: #f4f2f2;
+    margin-top: .1em;
+  }
+
+  .search-button:hover {
+    cursor: pointer;
   
+  } */
+
+
+  .nav-links{
+    position: relative;
+    right: 45px;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+      list-style-type: none;
+      margin: 0em 0em 0em 5em;
+  }
+
+  .nav-links li{
+      text-align: left;
+  }
+  
+
+   /*This is the css for the footer */
+
+  .footer{
+      background-color: #665635;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      width: 110%;
+      height: 300px;
+      color:#0B2633;
+      border-radius: 70px 70px 0px 0px;
+  }
+
+  #footer-title{
+      font-size: 100px;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+
 }
 
 @media (max-width: 480px) {
