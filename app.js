@@ -24,6 +24,12 @@ const pool = new pg.Pool({
   port: process.env.DB_PORT,
 });
 
+function getCurrentYear() {
+  const now = new Date();
+  const date= now.getFullYear();
+  return date;
+}
+
 app.get("/",async (req, res) => {
   try{
     // adjust the next link to fetch the first 100 number of rows in the skills table 
@@ -47,8 +53,7 @@ app.get("/",async (req, res) => {
     try {
       const result = await pool.query("SELECT * FROM skills WHERE skill_id IN ($1, $2, $3)", [random_number1, random_number2, random_number3]);
       // console.log(result.rows);
-      const now = new Date();
-      const date= now.getFullYear();
+      const date = getCurrentYear();
       res.render('home', { skill: result.rows, Date: date });
     } catch (err) {
       console.error(err);
@@ -64,7 +69,8 @@ app.get("/explore",async (req, res) => {
     try {
       const result = await pool.query("SELECT * FROM skills");
     console.log(result.rows);
-    res.render('explore', { skills: result.rows});
+    const date = getCurrentYear();
+    res.render('explore', { skills: result.rows, Date: date });
     }
       catch (err) {
       console.error(err);
@@ -74,15 +80,18 @@ app.get("/explore",async (req, res) => {
 });
 
 app.get("/profile", (req, res) => {
-  res.render("profile.ejs");
+  const date = getCurrentYear();
+  res.render("profile.ejs", { Date: date });
 });
 
 app.get("/login", (req, res) => {
-  res.render("login.ejs");
+  const date = getCurrentYear();
+  res.render("login.ejs", { Date: date });
 }); 
 
 app.get("/bookings", (req, res) => {
-  res.render("bookings.ejs");
+  const date = getCurrentYear();
+  res.render("bookings.ejs", { Date: date });
 });
 
 //this route handles registration of new users, inserting the user data into the database and then redirecting to the login page

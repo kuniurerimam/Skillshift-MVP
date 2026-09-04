@@ -1,7 +1,10 @@
+/* FIX THE SEARCH BAR FOR EVERYTHING */
+
 body{
     margin: 0;
     background-color:#0B2633;
     width: 100%;
+    height: 100%;
  }
 
 main{
@@ -20,11 +23,25 @@ a {
     left: 20px;
 }
 
-/*this is the layout for the 2048px and above screens*/
+.burger{
+    display: none;
+  }
 
-@media (min-width: 2048px) {
+.burger div{
+    display: none;
+    width: 25px;
+    height: 3px;
+    background-color: #0B2633;
+    margin: 5px;
+}
+
+.close_burger_list{
+  display: none;
+}
+
+
   /*This is the css for the header */ 
-  .navbar{
+  /* .navbar{
       display: flex;
       justify-content: space-between;
       padding: 10px 0px 10px 10px;
@@ -52,29 +69,7 @@ a {
     justify-content: center;
     text-align: center;
   }
-  /* 
-  .search-input {
-    font-family: inherit;
-    font-size: inherit;
-    background-color: #f4f2f2;
-    border: none;
-    color: #646464;
-    padding: 0.7rem 1rem;
-    border-radius: 30px;
-  }
-
-
-  .search-button {
-    border: none;
-    background-color: #f4f2f2;
-    margin-top: .1em;
-  }
-
-  .search-button:hover {
-    cursor: pointer;
   
-  } */
-
 
   .nav-links{
       display: flex;
@@ -86,13 +81,13 @@ a {
 
   .nav-links li{
       text-align: left;
-  }
+  } */
 
 
 
 
   /*This is the css for the home page */
-  .home-hero-container{
+  /* .home-hero-container{
       background-color: #0B2633;
   }
 
@@ -191,12 +186,12 @@ a {
   .card-container .box:hover {
     box-shadow: 0px 0px 20px 1px #ffbb763f;
     border: 1px solid rgba(255, 255, 255, 0.454);
-  }
+  } */
 
 
   /*This is the css for the footer */
  
-  .footer{
+  /* .footer{
       background-color: #665635;
       text-align: center;
       padding: 20px;
@@ -210,14 +205,14 @@ a {
       font-size: 100px;
       font-weight: bold;
       margin-bottom: 10px;
-  }
+  } */
 
-}
+
 
 /*this is the layout for the 2048px to  screens*/
 
 
-@media (max-width: 2047px) {
+@media (max-width: 2048px) {
   /*This is the css for the header */ 
   .navbar{
       display: flex;
@@ -500,22 +495,64 @@ a {
   
   } */
 
-
-  .nav-links{
+  .burger{
+    display: block;
+    cursor: pointer;
     position: relative;
-    right: 45px;
-      display: flex;
+    right: 2em;
+    margin-left: 10px;
+  }
+
+  .burger div{
+    display: block; 
+  }
+
+  .burger_list{
+    display: none;
+  }
+
+  .burger_list_active {
+    background-color: #ffffff;
+    position: fixed;
+    left: 50%;
+    z-index: 2;
+    height: 75%;
+    width: 55%;
+  }
+
+  .nav-links_active {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-      list-style-type: none;
-      margin: 0em 0em 0em 5em;
+    gap: 2em;
+    margin: 0px;
   }
 
-  .nav-links li{
-      text-align: left;
+  .nav-links_li_active {
+    text-align: center;
+    margin: 0px;
+    border: 1px solid #0B2633;
+    font-size: 50px;
+    width: 100%;
   }
-  
 
+  .close_burger_list_active {
+    display: block;
+    position: relative;
+    left: 75%;
+    top: 0;
+    cursor: pointer;
+    margin-bottom: 2em;
+
+  }
+
+  .close_burger_list_line{
+    width: 1.5em;
+    height: 0.2em;
+    background-color: #0B2633;
+    margin: 0.5em 0.5em;
+  }
    /*This is the css for the footer */
 
   .footer{
@@ -523,6 +560,7 @@ a {
       text-align: center;
       padding: 20px;
       position: relative;
+      top:100%;
       width: 110%;
       height: 300px;
       color:#0B2633;
@@ -537,6 +575,7 @@ a {
 
 }
 
-@media (max-width: 480px) {
-  
+@media (max-width: 540px) {
+  /* From Uiverse.io by Cevorob */ 
+
 }
