@@ -41,7 +41,7 @@ a {
 
 
   /*This is the css for the header */ 
-  /* .navbar{
+  .navbar{
       display: flex;
       justify-content: space-between;
       padding: 10px 0px 10px 10px;
@@ -81,13 +81,13 @@ a {
 
   .nav-links li{
       text-align: left;
-  } */
+  }
 
 
 
 
   /*This is the css for the home page */
-  /* .home-hero-container{
+  .home-hero-container{
       background-color: #0B2633;
   }
 
@@ -186,12 +186,12 @@ a {
   .card-container .box:hover {
     box-shadow: 0px 0px 20px 1px #ffbb763f;
     border: 1px solid rgba(255, 255, 255, 0.454);
-  } */
+  }
 
 
   /*This is the css for the footer */
  
-  /* .footer{
+  .footer{
       background-color: #665635;
       text-align: center;
       padding: 20px;
@@ -205,7 +205,7 @@ a {
       font-size: 100px;
       font-weight: bold;
       margin-bottom: 10px;
-  } */
+  }
 
 
 
