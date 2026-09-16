@@ -5,6 +5,7 @@ $(".burger").on("click", function(){
     $(".nav-links").addClass("nav-links_active");
     $(".nav-links li").addClass("nav-links_li_active");
     $(".close_burger_list").addClass("close_burger_list_active");
+    
 });
 
 $(".close_burger_list").on("click", function(){
