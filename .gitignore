@@ -1,3 +1,21 @@
-node_modules/
+#Demo files
 files/
+
+# Dependencies
+node_modules/
+
+# Production builds / Output
+dist/
+build/
+
+# Local environment variables (Never upload this!)
 .env
+.env.local
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Editor configurations (VS Code, JetBrains)
+.vscode/
+.idea/

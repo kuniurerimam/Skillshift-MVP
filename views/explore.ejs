@@ -1,15 +1,21 @@
 <%- include('partials/header') %>
 
 <% if (locals.skills) { %>
-  
-  <% skills.forEach(skill => { %>
-    <p>
-      <%= skill.proficiency_level %><br>
-      <%= skill.skill_name %><br>
-      <%= skill.description %><br>
-    </p>
-
+  <div class="explore_container">
+    <% skills.forEach(skill => { %>
+    
+     <div class="card-container explore">
+       <div class="box">
+         <span class="title"><%= skill.skill_name %></span>
+          <div>
+            <strong><%= skill.category %></strong>
+            <p><%= skill.description %></p>
+            <span><%= skill.proficiency_level %></span>
+          </div>
+        </div>
+      </div>
   <% }) %>
+  </div>
 <% } else { %>
   <p>No skills found.</p>
 <% } %>
