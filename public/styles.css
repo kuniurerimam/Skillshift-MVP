@@ -1,12 +1,13 @@
 /*TODO*/
-/* -- FIX THE SEARCH BAR FOR EVERYTHING */
-/* --design the login page*/
-/*--Make the login page responsive*/
-/*--Put in authorization and authentication*/
+/* ---design the login page---*/
+/*---Make the login page responsive---*/
+/*---Put in authentication---*/
+/* --Add sessions */
 /*--Design onboarding pages*/
 /* --fix navebar to be different for registered and unregistered users*/
 /* --FIX THE SEARCH BAR FOR EVERYTHING */
 /* --asthetics to each page */
+/*--Put in authorization */
 
 body {
   width: 100%;
@@ -207,9 +208,7 @@ div input {
   background-color: #b2d5e5;
 }
 
-.login_page_background {
-  background-image: linear-gradient(30deg, #0b2633 60%, #665635);
-}
+
 
 .login_container {
   display: flex;
@@ -263,9 +262,6 @@ div input {
   text-align: center;
 }
 
-.register_form_container {
-  display: none;
-}
 
 .login_form,
 .register_form {
