@@ -1,44 +1,30 @@
 <%- include('partials/header') %>
-<div class="login_page_background">
+  <div class="login_page_background">
     <div class="login_container">
       <div class="login_flip_card">
 
       </div>
-      <div class="register_form_container">
-            <h1>Welcome to Skillshift</h1>
-            <p>Start connecting and exchanging skills and experience with other talented individuals now.</p>
-            <form action="/register" method="POST" class="register_form">
-              <div>
-                <input type="text" id="email" name="email" placeholder="  Email" required>
-              </div>
+
+      <div class="login_form_container">
+        <h1>Welcome back to Skillshift</h1>
+        <p>Connecting and exchanging skills and experience with other talented individuals.</p>
+        <form action="/login" method="POST" class="login_form">
+          <% if (locals.err) { %>
+            <p class="login_error_message">
+              <%= err %>
+            </p>
+            <% } %>
               <div>
                 <input type="text" id="username" name="username" placeholder="  Username" required>
               </div>
               <div>
                 <input type="password" id="password" name="password" placeholder="  Password" required>
               </div>
-              <div>
-                <input type="password" id="comfirm password" name="comfirm_password" placeholder="  Comfirm password" required>
-              </div>
-              <button type="submit" id="register_button">Register</button>
-            </form>
-            <p>Already have an account? <a class="login_from_register">login</a></p>
-      </div>
-      <div class="login_form_container">
-        <h1>Welcome back to Skillshift</h1>
-        <p>Connecting and exchanging skills and experience with other talented individuals.</p>
-        <form action="/login" method="POST" class="login_form">
-          <div>
-            <input type="text" id="username" name="username" placeholder="  Username" required>
-          </div>
-          <div>
-            <input type="password" id="password" name="password" placeholder="  Password" required>
-          </div>
-          <button type="submit" id="login_button">Login</button>
+              <button type="submit" id="login_button">Login</button>
         </form>
-        <p>Don't have an account? <a class="register_from_login">Register</a></p>
+        <p>Don't have an account? <a class="register_from_login" href="/register">Register</a></p>
       </div>
     </div>
-</div>
+  </div>
 
-<%- include('partials/footer') %>
+  <%- include('partials/footer') %>

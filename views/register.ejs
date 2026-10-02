@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+    <div class="login_page_background">
+        <div class="login_container">
+            <div class="login_flip_card">
+
+            </div>
+            <div class="register_form_container">
+                <h1>Welcome to Skillshift</h1>
+                <p>Start connecting and exchanging skills and experience with other talented individuals now.</p>
+                <form action="/register" method="POST" class="register_form">
+                    <% if (locals.err) { %>
+                        <p class="reg_error_message"><%= err %></p>
+                    <% } %>
+                    <div>
+                        <input type="text" id="email" name="email" placeholder="  Email" required>
+                    </div>
+                    <div>
+                        <input type="text" id="username" name="username" placeholder="  Username" required>
+                    </div>
+                    <div>
+                        <input type="password" id="password" name="password" placeholder="  Password" required>
+                    </div>
+                    <div>
+                        <input type="password" id="confirm password" name="confirm_password"
+                            placeholder="  Confirm password" required>
+                    </div>
+                    <button type="submit" id="register_button">Register</button>
+                </form>
+                <p>Already have an account? <a class="login_from_register" href="/login">login</a></p>
+            </div>
+
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
